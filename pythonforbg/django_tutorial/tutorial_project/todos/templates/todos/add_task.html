@@ -1,0 +1,17 @@
+{% extends "todos/base.html" %}
+
+{% block title %}Add Task{% endblock %}
+
+{% block content %}
+    <h1>Add Task</h1>
+    <form method="POST" action="{% url 'todos:post_task' %}">
+        {% csrf_token %}
+        <label for="task_summery">Task Summery:</label>
+        <input type="text" id="task_summery" name="task_summery" placeholder="Help at Home">
+
+        <label for="task_description">Task Description:</label>
+        <input type="text" id="task_description" name="task_description" placeholder="Help mom do the dishes">
+
+        <button type="submit">Add Task</button>
+    </form>
+{% endblock %}

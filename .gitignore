@@ -1,1 +1,5 @@
 projects/*
+
+# Zig build artifacts (ignore everywhere)
+.zig-cache/
+zig-out/
